@@ -3,9 +3,12 @@ import { logos } from 'virtual:starlight/user-images';
 import config from 'virtual:starlight/user-config';
 import type { Props } from '../props';
 import { formatPath } from '../utils/format-path';
+import { getI18nTitle } from '../utils/i18n'
+const { lang } = Astro.props;
 
 const { siteTitle } = Astro.props;
 const href = formatPath(Astro.props.locale || '/');
+const siteTitle = getI18nTitle(lang)
 ---
 
 <a {href} class="site-title sl-flex">
