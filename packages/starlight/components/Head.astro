@@ -13,7 +13,7 @@ const { data } = entry;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
 const description = data.description || config.description;
-
+const siteTitle =  config.title[lang] || config.title.root;
 const headDefaults: z.input<ReturnType<typeof HeadConfigSchema>> = [
 	{ tag: 'meta', attrs: { charset: 'utf-8' } },
 	{
