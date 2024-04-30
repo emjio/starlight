@@ -36,7 +36,6 @@ export default function StarlightIntegration({
 					logger,
 				});
 				userConfig = starlightConfig;
-
 				const useTranslations = createTranslationSystemFromFs(starlightConfig, config);
 
 				if (!userConfig.disable404Route) {
